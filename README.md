@@ -4,7 +4,7 @@ username=$(cat /tmp/userlist | tr 'A-Z' 'a-z')
 password=$username@123
 for user in $username
 do
-useradd  $username
+useradd  $user
 echo $password  | passwd --stdin $username
 done
 echo "$(wc -l /tmp/userlist) users have been created"
